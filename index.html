@@ -1,11 +1,27 @@
+---
+layout: layout
+title: se-Jekyll
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8" />
-	<title>suckeffect</title>
-	<meta name="generator" content="BBEdit 10.1" />
+	<meta http-equiv=Content-type content="text/html; charset=utf-8">
+	<title>I wonder as I wander.</title>
 </head>
 <body>
-<p>Let's try this. I mean how bad can it be.</p>
+<h3>I want to go to there.</h3>
+<div class="content">
+  <div class="related">
+    <ul>
+      {% for post in site.posts %}
+      <li>
+	<span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
 </body>
 </html>
